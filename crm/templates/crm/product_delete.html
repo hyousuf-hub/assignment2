@@ -1,0 +1,28 @@
+{% extends 'crm/base.html' %}
+{% block body_block %}
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Maverick Food Services</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+</head>
+<body>
+    <style>
+        body {
+            background-color: beige;
+        }
+    </style>
+
+    <h1>Delete Service</h1>
+
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" class="btn btn-danger" value="Delete">
+        <a href="{% url 'crm:home' pk=product.cust_number %} ">Cancel</a>
+
+    </form>
+</body>
+</html>
+{% endblock %}
